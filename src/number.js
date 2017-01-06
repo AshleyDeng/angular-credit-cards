@@ -32,7 +32,7 @@ function factory ($parse, $timeout) {
         }
 
         function setCursorPostion (element, position) {
-          $timeout(() => {
+          $timeout(function() {
             if (element.setSelectionRange) {
               element.setSelectionRange(position, position)
             } else if (element.createTextRange) {
